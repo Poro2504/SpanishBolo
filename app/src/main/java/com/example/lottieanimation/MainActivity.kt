@@ -14,25 +14,11 @@ class MainActivity : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_main)
 
-        animation.startAnimation(AnimationUtils.loadAnimation(this, R.anim.splash_in))
+        Animation.startAnimation(AnimationUtils.loadAnimation(this, R.anim.splash_in))
         Handler().postDelayed({
-            animation.startAnimation(AnimationUtils.loadAnimation(this, R.anim.splas_out))
-            Handler().postDelayed({Intent(this,Main2Activity::class.java)
-                animation.visibility=View.GONE
-            }, 500)
-        }, 3000)
-        textView.startAnimation(AnimationUtils.loadAnimation(this, R.anim.splash_in))
-        Handler().postDelayed({
-            textView.startAnimation(AnimationUtils.loadAnimation(this, R.anim.splas_out))
-            Handler().postDelayed({Intent(this,Main2Activity::class.java)
-                animation.visibility=View.GONE
-            }, 500)
-        }, 3000)
-        textView2.startAnimation(AnimationUtils.loadAnimation(this, R.anim.splash_in))
-        Handler().postDelayed({
-            textView2.startAnimation(AnimationUtils.loadAnimation(this, R.anim.splas_out))
+            Animation.startAnimation(AnimationUtils.loadAnimation(this, R.anim.splas_out))
             Handler().postDelayed({
-                animation.visibility=View.GONE
+                Animation.visibility=View.GONE
                 startActivity(Intent(this,Main2Activity::class.java))
             }, 500)
         }, 3000)
